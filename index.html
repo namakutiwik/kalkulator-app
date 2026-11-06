@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator 1-10</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Kalkulator 1–10</h1>
+
+    <!-- Tampil saat BELUM login -->
+    <section id="view-login">
+      <p>Silakan login dengan akun Google untuk memakai kalkulator.</p>
+      <button id="btn-login" class="btn-primary">Login dengan Google</button>
+    </section>
+
+    <!-- Tampil saat SUDAH login -->
+    <section id="view-app" hidden>
+      <div class="user">
+        <img id="user-photo" alt="" />
+        <span id="user-name"></span>
+        <button id="btn-logout" class="btn-link">Logout</button>
+      </div>
+
+      <div class="calc">
+        <select id="angka1"></select>
+        <select id="operator">
+          <option value="+">+</option>
+          <option value="-">−</option>
+        </select>
+        <select id="angka2"></select>
+        <button id="btn-hitung" class="btn-primary">=</button>
+      </div>
+
+      <p class="hasil">Hasil: <strong id="hasil">–</strong></p>
+    </section>
+
+    <p id="error" class="error"></p>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
